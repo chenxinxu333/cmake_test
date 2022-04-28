@@ -1,7 +1,16 @@
-cmake_minimum_required(VERSION 3.20.0)
+# Specify the minimum version for CMake
 
-project(hello_world NONE)
+cmake_minimum_required(VERSION 2.8)
 
-enable_language(C)
+# Project's name
 
-add_executable(app main.c)
+project(hello)
+# Set the output folder where your program will be created
+set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+
+# The following folder will be included
+include_directories("${PROJECT_SOURCE_DIR}")
+
+add_executable(hello ${PROJECT_SOURCE_DIR}/hellocmake.cpp)
