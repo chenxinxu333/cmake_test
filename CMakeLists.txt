@@ -13,4 +13,4 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 # The following folder will be included
 include_directories("${PROJECT_SOURCE_DIR}")
 
-add_executable(hello ${PROJECT_SOURCE_DIR}/m1ain.c)
+add_executable(hello ${PROJECT_SOURCE_DIR}/main.c)
